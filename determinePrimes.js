@@ -12,7 +12,7 @@ function isPrime(num) {
 function findPrimes(lowerBound, upperBound) {
     var primeArray = [];
     if(lowerBound < 0 && upperBound < 0){ throw new Error('Please use positive numbers.'); }
-    if (isNaN(lowerBound) || isNaN(upperBound) ){ throw new Error('Please use numbers.'); }
+    else if (isNaN(lowerBound) || isNaN(upperBound) ){ throw new Error('Please use numbers.'); }
     else if (lowerBound === upperBound){ throw new Error('Please use a valid range.'); }
     else {
         if(lowerBound > upperBound) {
