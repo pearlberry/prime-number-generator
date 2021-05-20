@@ -1,0 +1,24 @@
+{
+  "name": "prime-number-generator",
+  "version": "1.0.0",
+  "description": "prime number generator",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "prompt-sync": "^4.2.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pearlberry/prime-number-generator.git"
+  },
+  "author": "lauren.christianson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pearlberry/prime-number-generator/issues"
+  },
+  "homepage": "https://github.com/pearlberry/prime-number-generator#readme"
+}
