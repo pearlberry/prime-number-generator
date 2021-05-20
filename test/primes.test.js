@@ -1,5 +1,5 @@
 const { expect } = require('@jest/globals');
-const { isPrime, findPrimes } = require('./determinePrimes');
+const { isPrime, findPrimes } = require('../lib/determinePrimes');
 
 
   test('1 is a prime number', () => {
