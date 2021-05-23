@@ -2,8 +2,12 @@ const { expect } = require('@jest/globals');
 const { isPrime, findPrimes } = require('../lib/determinePrimes');
 
 
-  test('1 is a prime number', () => {
-    expect(isPrime(1)).toBe(true);
+  test('0 is not a prime number', () => {
+    expect(isPrime(1)).toBe(false);
+  });
+
+  test('1 is not a prime number', () => {
+    expect(isPrime(1)).toBe(false);
   });
 
   test('2 is a prime number', () => {
@@ -12,6 +16,10 @@ const { isPrime, findPrimes } = require('../lib/determinePrimes');
 
   test('4 is not a prime number', () => {
     expect(isPrime(4)).toBe(false);
+  });
+
+  test('-7 is not a prime number', () => {
+    expect(isPrime(-7)).toBe(false);
   });
 
   test('expected prime numbers are returned for user specified ranges', () => {
@@ -53,7 +61,12 @@ const { isPrime, findPrimes } = require('../lib/determinePrimes');
     expect(findPrimes(-10, 9)).toEqual(arr);
   });
 
-  test('0 and 1 are not prime numbers', () => {
-    const arr = [2,3,5,7]
-    expect(findPrimes(0, 10)).toEqual(arr);
+  test('lower and upper bounds are included when they are prime', () => {
+    const arr = [13,17,19,23,29,31]
+    expect(findPrimes(13, 31)).toEqual(arr);
+  });
+
+  test('lower and upper bounds are not included when they are not prime', () => {
+    const arr = [13,17,19,23]
+    expect(findPrimes(12, 25)).toEqual(arr);
   });
